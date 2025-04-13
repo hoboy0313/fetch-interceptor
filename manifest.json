@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/chrome-manifest.json",
+  "manifest_version": 3,
+  "name": "Fetch Interceptor",
+  "version": "1.0.0",
+  "description": "拦截和修改页面中的 XHR 和 Fetch 请求",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "<all_urls>"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "options_ui": {
+    "page": "src/pages/options/index.html"
+  },
+  "devtools_page": "src/pages/devtools/entry.html",
+  "action": {
+    "default_popup": "src/pages/popup/index.html"
+  }
+}
