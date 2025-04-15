@@ -10,7 +10,7 @@
         "./src/*"
       ]
     },
-    "types": ["chrome"] // 不包含 node 类型
+    "types": ["chrome", "vite/client"] // 不包含 node 类型
   },
   "include": [
     "src/**/*.ts",

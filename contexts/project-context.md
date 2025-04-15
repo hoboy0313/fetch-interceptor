@@ -10,24 +10,25 @@
 - **语言**: TypeScript
 - **样式**: TailwindCSS 4.x
 - **状态管理**: Zustand 4.x
-- **UI 组件**:
-  - Radix UI (Checkbox, Switch)
-  - Lucide React (图标)
+- **UI 组件**: Shadcn UI
+- **图标库**: Lucide React
 
 ## 项目结构
 ```
 src/
-├── components/     # 可复用组件
-│   └── ui/        # UI 基础组件
-├── lib/           # 工具库和辅助函数
+├── components/         # 可复用组件
+│   └── ui/             # UI 基础组件
+├── lib/                # 工具库和辅助函数
 │   └── utils.ts
-├── pages/         # Chrome 扩展的各个页面
-│   ├── popup/     # 扩展弹出窗口
-│   ├── options/   # 扩展配置页面
-│   ├── devtools/  # 开发者工具面板
-│   └── background/# 后台脚本
-├── stores/        # 状态管理存放的地方
-└── styles/        # 全局样式文件
+├── pages/              # Chrome 扩展的各个页面
+│   ├── popup/          # 扩展弹出窗口
+│   ├── options/        # 扩展配置页面
+│   ├── devtools/       # 开发者工具面板
+│   └── background/     # 后台脚本
+├── services/           # 所有请求存放的地方
+│   └── core/           # 请求封装核心基础工具
+├── stores/             # 状态管理存放的地方
+└── styles/             # 全局样式文件
 ```
 
 ## 开发环境
@@ -54,3 +55,6 @@ src/
 
 ## 项目规范
 - 文件名采用中划线命名方式
+
+## 注意事项
+1. 项目中已经引入了 tailwindcss 相关样式，无需再引入 tailwindcss 相关 css 代码。

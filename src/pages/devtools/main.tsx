@@ -4,14 +4,13 @@ import ReactDOM from 'react-dom/client';
 import * as env from '@/lib/env';
 
 import '@/styles/globals.css';
+import './index.scss';
 
 import App from './App';
 
-const isDev = import.meta.env.MODE === 'development';
-// 是否在扩展环境中
+const isDev = env.isDevlopment();
 const isExtension = env.isExtensionEnv();
-// 是否在 iframe 中
-const isIframe = !!window.self.frameElement;
+const isIframe = env.isIframeEnv();
 
 if (isDev && isExtension && !isIframe) {
   // it's a way with hmr in dev mode.
