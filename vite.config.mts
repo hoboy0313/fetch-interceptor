@@ -23,11 +23,10 @@ export default defineConfig(({mode}) => {
     build: {
       rollupOptions: {
         input: {
-          popup: 'src/pages/popup/index.html',
-          background: 'src/pages/background/index.html',
-          devtools: 'src/pages/devtools/index.html',
-          devtoolsEntry: 'src/pages/devtools/entry.html',
-          options: 'src/pages/options/index.html',
+          popup: 'src/entries/popup/index.html',
+          devtools: 'src/entries/devtools/index.html',
+          devtoolsEntry: 'src/entries/devtools/entry.html',
+          options: 'src/entries/options/index.html',
         },
         output: {
           chunkFileNames: 'assets/[name].[hash].js',

@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "fetch-interceptor",
+    "type": "chrome-extension",
+    "root": "src"
+  },
+  "tasks": {
+    "interceptRequests": {
+      "pattern": ["src/services/core/**/*.ts"],
+      "description": "Handle request interception logic",
+      "tags": ["core", "network"]
+    },
+    "devtools": {
+      "pattern": ["src/pages/devtools/**/*.{ts,tsx}"],
+      "description": "DevTools panel UI and functionality",
+      "tags": ["ui", "devtools"]
+    },
+    "background": {
+      "pattern": ["src/pages/background/**/*.ts"],
+      "description": "Background script functionality",
+      "tags": ["core", "background"]
+    }
+  },
+  "watchers": {
+    "network": {
+      "patterns": ["src/services/core/**/*.ts"],
+      "commands": ["bun run build"]
+    },
+    "ui": {
+      "patterns": ["src/pages/**/*.{ts,tsx}"],
+      "commands": ["bun run dev"]
+    }
+  },
+  "scripts": {
+    "pre-commit": "bun run lint",
+    "post-build": "bun run test"
+  }
+}

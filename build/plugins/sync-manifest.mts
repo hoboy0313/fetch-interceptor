@@ -24,7 +24,7 @@ function syncManifest(): Plugin {
         this.addWatchFile(manifestPath);
       }
     },
-    buildEnd() {
+    writeBundle() {
       const root = config.root;
       const manifest = fs.readFileSync(path.resolve(root, 'manifest.json'), 'utf-8');
       const targetDir = path.resolve(root, config.build.outDir);
